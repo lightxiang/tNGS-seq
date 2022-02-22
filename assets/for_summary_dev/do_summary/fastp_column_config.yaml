@@ -1,0 +1,40 @@
+fastp_summary :
+    read_length :
+        path : '$.summary.before_filtering.read1_mean_length'
+        format : '{:.0f}'
+    before-total_reads :
+        path : '$.summary.before_filtering.total_reads'
+        format : '{}'
+    before-total_bases :
+        path : '$.summary.before_filtering.total_bases'
+        format : '{:,}'
+    before-q20_rate :
+        path : '$.summary.before_filtering.q20_rate'
+        format : '{:.2%}'
+    before-q30_rate :
+        path : '$.summary.before_filtering.q30_rate'
+        format : '{:.2%}'
+    before-gc_content :
+        path : '$.summary.before_filtering.gc_content'
+        format : '{:.2%}'
+    after-total_reads :
+        path : '$.summary.after_filtering.total_reads'
+        format : '{}'
+    after-total_bases :
+        path : '$.summary.after_filtering.total_bases'
+        format : '{:,}'
+    after-q20_rate :
+        path : '$.summary.after_filtering.q20_rate'
+        format : '{:.2%}'
+    after-q30_rate :
+        path : '$.summary.after_filtering.q30_rate'
+        format : '{:.2%}'
+    after-gc_content :
+        path : '$.summary.after_filtering.gc_content'
+        format : '{:.2%}'
+    adapter_rate :
+        path : '$.adapter_cutting.adapter_trimmed_reads / $.summary.before_filtering.total_reads'
+        format : '{:.2%}'
+    duplication_rate :
+        path : '$.duplication.rate'
+        format : '{:.2%}'

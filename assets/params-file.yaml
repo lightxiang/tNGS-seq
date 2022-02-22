@@ -1,0 +1,60 @@
+---
+args :
+    # Options: Generic
+    pe            : false
+    length_required   : 50
+    reads_to_process  : 0
+    dedup         : false
+    rna_dedup     : false
+    rrnarm        : false
+    rna_rrnarm    : true
+    skip_hsacrm   : false
+    uvrm          : false
+    dhost_tool    : 'bowtie2'
+    dhost_local   : false
+    algorithm     : 'bwa-mem'
+    ## unusually
+    libprepkit    : 'auto'
+    sample_type   : 'auto'
+    rna           : false
+
+    # Options: LowComplexityFilter
+    lcf_score     : 7
+
+    # Options: Unitstat filter, both of them are deprecated
+    mincl : 75
+    fflag : 'host_negative_total_base,plasmid,suspected_falsepositive,falsepositive'
+
+    # Options: References
+    host : 'hg38'
+
+
+    # Options: Database Version
+    rfam    : '13.0'
+    rrna    : 'All'
+    hsac    : '20200326'
+    univec  : '10.0'
+    cmdb    : '20210421'
+    cutoff  : '20201208'
+    cmb     : '7.02.02'
+    cmf     : '4.01.09'
+    cmi     : '4.01.06'
+    cmvd    : '4.03.01'
+    cmvi    : '4.01.02'
+    cmvr    : '4.03.01'
+    cmg     : '1.01.02'
+
+    # Options: Research
+    research      : false
+    skip_fastqc   : false
+    skip_hostfc   : false
+    skip_hostde   : false
+    skip_summary  : false
+    summary_panel : 'csf_panel'
+
+    # Options: System settings
+    dbdir : 's3://sagene-database/rpdseq-reborn/'
+    data  : false
+    add   : false
+
+...

@@ -1,0 +1,5 @@
+target :
+    B_item_000367 : 'KPN' # "肺炎克雷伯菌"
+    B_item_000791 : 'SAU' #"金黄色葡萄球菌"
+    F_item_00001  : 'CGA' #"格特隐球菌"
+    V_DNA_item_000008 : 'EBV' #"EB病毒"

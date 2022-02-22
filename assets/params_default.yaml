@@ -1,0 +1,55 @@
+# 此参数文件基于“illunima SE75 DNA文库 诊断模式”编写
+---
+Generic :
+    pe :
+        title    : "pe"
+        desc     : "双端测序"
+        editable : true
+        type     : boolean
+        value    : true
+    length_required :
+        title    : "length_required"
+        desc     : "reads质控后保留的最短长度"
+        editable : true
+        type     : int
+        value    : 75
+    reads_to_process :
+        title    : "reads_to_process"
+        desc     : "处理reads数"
+        editable : true
+        type     : int
+        value    : 0
+    algorithm :
+        title    : "algorithm"
+        desc     : "病原序列比对算法"
+        editable : true
+        type     : list
+        range    :
+            - bwa-mem
+        value    : bwa-mem
+    lims :
+        title    : "lims"
+        desc     : "允许最小的比对identity"
+        editable : true
+        type     : float
+        value    : 0.95
+    match :
+        title    : "match"
+        desc     : "允许最小的比对长度"
+        editable : true
+        type     : int
+        value    : 90
+
+
+
+DatabaseVersion :
+    tgdb :
+        title    : "tgdb.ver"
+        desc     : "目标物种序列数据库版本"
+        editable : true
+        type     : list
+        range    :
+            - "20220216"
+        value    : "20220216"
+
+...

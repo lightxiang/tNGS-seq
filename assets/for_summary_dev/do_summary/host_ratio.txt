@@ -1,0 +1,12 @@
+CS1195_AA-200219_NDX550190_0183_AHK27GBGXC.summary	94.35% overall alignment rate
+CS1196_AA-200219_NDX550190_0183_AHK27GBGXC.summary	94.55% overall alignment rate
+CS1197_AA-200219_NDX550190_0183_AHK27GBGXC.summary	94.46% overall alignment rate
+CS1198_AA-200219_NDX550190_0183_AHK27GBGXC.summary	94.40% overall alignment rate
+CS1199_AA-200219_NDX550190_0183_AHK27GBGXC.summary	94.35% overall alignment rate
+CS1200_AA-200219_NDX550190_0183_AHK27GBGXC.summary	94.33% overall alignment rate
+CS1201_AA-200219_NDX550190_0183_AHK27GBGXC.summary	94.45% overall alignment rate
+CS1202_AA-200219_NDX550190_0183_AHK27GBGXC.summary	94.42% overall alignment rate
+CS1203_AA-200219_NDX550190_0183_AHK27GBGXC.summary	94.40% overall alignment rate
+CS1204_AA-200219_NDX550190_0183_AHK27GBGXC.summary	94.46% overall alignment rate
+CS1205_AA-200219_NDX550190_0183_AHK27GBGXC.summary	94.39% overall alignment rate
+CS1217_AA-200219_NDX550190_0183_AHK27GBGXC.summary	94.24% overall alignment rate

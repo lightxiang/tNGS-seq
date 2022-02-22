@@ -1,0 +1,2 @@
+library_id,batch_id,read1,read2,libprepkit,sample_type,library_type
+SAM001,200190_NDX500_XEFSDFAS,/path/to/read_1.fq.gz,/path/to/read_2.fq.gz,ELQ,ncov,RNA
