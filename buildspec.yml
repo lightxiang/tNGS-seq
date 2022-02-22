@@ -1,0 +1,63 @@
+version: 0.2
+
+env:
+  variables:
+      VER: "1.0.5"
+     # key: "value"
+  #parameter-store:
+     # key: "value"
+     # key: "value"
+  #exported-variables:
+     # - variable
+     # - variable
+  #git-credential-helper: yes
+
+phases:
+  #install:
+    #如果您使用的是 Ubuntu 标准映像 2.0 或更高版本，则必须指定运行时版本。
+    #如果您指定了运行时版本，但是使用 Ubuntu 标准映像 2.0 以外的映像，则构建将失败。
+    #runtime-versions:
+      # name: version
+      # name: version
+    #commands:
+      # - command
+      # - command
+  pre_build:
+    commands:
+        - echo Logging in to Amazon ECR...
+        - $(aws ecr get-login --no-include-email --region cn-north-1)
+      # - command
+  build:
+    commands:
+        - echo Build started on `date`
+        - echo Building the Docker image...
+        - git checkout $VER
+        - docker build -t 878219578887.dkr.ecr.cn-north-1.amazonaws.com.cn/rpdseq-reborn:$VER .
+        - echo Archiving main files...
+        - git archive --format tar.gz $VER > $VER@pipeline.tar.gz
+      # - command
+  post_build:
+    commands:
+        - echo Build completed on `date`
+        - echo Pushing the Docker image...
+        - docker push 878219578887.dkr.ecr.cn-north-1.amazonaws.com.cn/rpdseq-reborn:$VER
+        - aws s3 cp $VER@pipeline.tar.gz s3://sagene-plugins-rpdseq-reborn/
+      # - command
+#reports:
+  #report-name-or-arn:
+    #files:
+      # - location
+      # - location
+    #base-directory: location
+    #discard-paths: yes
+    #file-format: JunitXml | CucumberJson
+#artifacts:
+  #files:
+    # - location
+    # - location
+  #name: $(date +%Y-%m-%d)
+  #discard-paths: yes
+  #base-directory: location
+#cache:
+  #paths:
+    # - paths
